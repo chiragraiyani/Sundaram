@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sundram</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"  crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"  crossorigin="anonymous"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"  crossorigin="anonymous"></script> -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" ></script> -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<style>
+  body{
+    background: #ffebcd45;
+  }
+.navbar-default{
+  background:transparent;
+  color:blue;
+}
+.navbar.solid {
+ background-color: #005687;
+ -webkit-transition: background-color 0.25s ease 0s;
+ transition: background-color 0.25s ease 0s;
+ box-shadow: 0 0 4px grey;
+ 
+}
+.btnclass{
+ border: 0px!important;
+}
+
+  .container-fluid{
+    padding-left: 0px!important;
+    padding-right: 0px!important;
+
+    }
+    .row{
+      margin-left:0px!important;
+      margin-right:0px!important;
+      padding: 0px !important;
+    }
+    .navbar-brand{
+      color:black!important;
+      margin-left: 25px;
+    }
+    .fa-bars{
+        color:white;
+      }
+      .navbar-brand:hover{
+        color:orange!important;
+      }
+    @media only screen and (max-width: 768px) {
+          .navbar img {
+              max-width:50%;
+          }
+          nav{
+            padding-top:8px;
+            margin-top:15px;
+          }
+          .navbar-light .navbar-toggler{
+            color:blanchedalmond;
+          }
+          .Aboutimagemargin{
+              margin-top:0px!important;
+            }
+            .Aboutheading{
+                font-family: "Montserrat", Arial, sans-serif;
+                font-size: 3rem!important;
+                font-weight: 500;
+                line-height: 1.5;
+                text-align: center;
+                margin-top:40px;
+                color:black ;
+            }
+            .heading{
+              font-size:3rem!important;
+            }
+            .reralink{
+              text-align: center!important;
+            }
+            .reraregiser{
+                text-align: center!important;
+              }
+              .padclass{
+                padding-right: 0px!important;
+              }
+      }
+      @media only screen and (min-width: 768px) {
+          .navbar img {
+              max-width:20%;
+          }
+          .navbarNavAltMarkup{
+            justify-content: flex-end;
+          }
+          nav{
+            margin-top:18px;
+          }
+          .floatright{
+            position: absolute;
+            right: 25px;
+          }
+      }
+
+      .mapouter{
+        position:relative;
+        text-align:right;
+        height:500px;
+        width:600px;
+      }
+      .gmap_canvas {
+        overflow:hidden;
+        background:none!important;
+        height:500px;
+        width:600px;
+      }
+   
+      /*Image grid css Start*/
+      @import url(https://fonts.googleapis.com/css?family=Montserrat:500);
+
+:root {
+/* Base font size */
+font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+}
+
+body {
+min-height: 100vh;
+/*background-color: #fafafa;*/
+}
+
+.container {
+max-width: 100rem;
+/*margin: 0 auto;*/
+padding: 0 2rem 2rem;
+}
+
+.heading {
+font-family: "Montserrat", Arial, sans-serif;
+font-size: 4rem;
+font-weight: 500;
+line-height: 1.5;
+text-align: center;
+padding: 3.5rem 0;
+color: black;
+}
+
+.heading span {
+display: block;
+}
+
+.gallery {
+display: flex;
+flex-wrap: wrap;
+/* Compensate for excess margin on outer gallery flex items */
+margin: -1rem -1rem;
+}
+
+.gallery-item {
+/* Minimum width of 24rem and grow to fit available space */
+flex: 1 0 24rem;
+/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+/*margin: 1rem;*/
+box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+overflow: hidden;
+}
+
+.gallery-image {
+display: block;
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 400ms ease-out;
+}
+
+.gallery-image:hover {
+transform: scale(1.15);
+}
+
+/*
+
+The following rule will only run if your browser supports CSS grid.
+
+Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling. 
+
+*/
+
+@supports (display: grid) {
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+  grid-gap: 2rem;
+}
+
+.gallery,
+.gallery-item {
+  margin: 0;
+}
+}
+
+      /*Image grid css end*/
+
+
+      /*Brochure Slider Start*/
+
+      @-webkit-keyframes scroll {
+0% {
+  transform: translateX(0);
+}
+100% {
+  transform: translateX(calc(-250px * 7));
+}
+}
+
+@keyframes scroll {
+0% {
+  transform: translateX(0);
+}
+100% {
+  transform: translateX(calc(-250px * 7));
+}
+}
+.slider {
+background: white;
+box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+height: 100px;
+margin: auto;
+overflow: hidden;
+position: relative;
+width: 100%;
+}
+.slider::before, .slider::after {
+/*background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);*/
+content: "";
+height: 100px;
+position: absolute;
+width: 200px;
+z-index: 2;
+}
+.slider::after {
+right: 0;
+top: 0;
+transform: rotateZ(180deg);
+}
+.slider::before {
+left: 0;
+top: 0;
+}
+.slider .slide-track {
+-webkit-animation: scroll 40s linear infinite;
+        animation: scroll 40s linear infinite;
+display: flex;
+width: calc(250px * 14);
+}
+.slider .slide {
+height: 100px;
+width: 250px;
+}
+      /*Brochure Slider End*/
+.fa-envelope{
+color:white;
+}
+.fa-phone-alt{
+color:white;
+}
+.fa-map-marker-alt{
+color:white;
+}
+.Aboutheading{
+    font-family: "Montserrat", Arial, sans-serif;
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  margin-top:40px;
+  color:black ;
+}
+.Aboutimagemargin{
+margin-top:50px;
+}
+.reralink{
+            text-align: right;
+        }
+.reraregiser{
+  text-align: left;
+}
+.padclass{
+  padding-right: 52px;
+}
+</style>
+
+
+</head>
+<body>
+  <div class="container-fluid" style="background: #9d73732e;">
+    <div class="row">
+        <div class="col-sm-12 col-md-12" style="padding-right:0px;padding-left:0px;">
+              <nav class="navbar navbar-default navbar-expand-lg navbar-light" style="display:flex">
+               
+              <img class="" src="./images/sundaram.png"
+                  itemprop="logo"  style="height:100px;padding-left: 20px"/>
+                 
+              
+
+              <button class="navbar-toggler btnclass" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" style="padding-right:25px;font-size: 21px">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+              
+              <div class="collapse navbar-collapse floatright" id="navbarNavAltMarkup" style="justify-content: flex-end;width: 800%;">
+                      <div class="navbar-nav">
+                       <!-- <a class="navbar-brand" href="/NaturesSelect/NaturesSelect">Home <span class="sr-only">(current)</span></a>
+                      <a class="navbar-brand " href="/NaturesSelect/Our_Recipe">Recipe</a>
+                      <a class="navbar-brand " href="#">Shop</a>
+                      <a class="navbar-brand " href="/NaturesSelect/Cart">Cart</a>
+                      <a class="navbar-brand" href="/NaturesSelect/Checkout_page">Checkout</a>
+                      <a class="navbar-brand" href="/NaturesSelect/LoginPage">Login</a>  -->
+                      <a class="navbar-brand" href="tel:+91 9825203020"> <span style="font-size: 20px"> Call us at +91 9825203020</span></a>
+                  </div>
+              </div>
+              </nav>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+ <div class="row">
+  <div class="col-sm-12 col-md-12 text-center" style="margin-top: 40px">
+      <p style="font-size:30px"><b>AMENITIES</b></p>
+  </div>
+ </div>
+ <div class="row">
+   <div class="col-sm-3 col-3 col-md-3 text-center">
+      <img src="./images/location.png" width="30%" /><br/><br/>
+      <p style="color:grey;font-size: 13px"><b>Ideal location for recidental locality</b></p>
+   </div>
+   <div class="col-sm-3 col-3 col-md-3 text-center">
+      <img src="./images/apartment.png" width="30%" /><br/><br/>
+      <p style="color:grey;font-size: 13px"><b>Aesthetically elegant & atractive elevation</b></p>
+   </div>
+   <div class="col-sm-3 col-3 col-md-3 text-center">
+      <img src="./images/fence.png" width="30%" /><br/><br/>
+      <p style="color:grey;font-size: 13px"><b>Project boundary with compound wall and atractive main gate</b></p>
+   </div>
+   <div class="col-sm-3 col-3 col-md-3 text-center">
+      <img src="./images/lift.png" width="30%" /><br/><br/>
+      <p style="color:grey;font-size: 13px"><b>Attractive entrance foyer and two hi speed lift</b></p>
+   </div>
+ </div>
+ <div class="row">
+   <div class="col-sm-3 col-3 col-md-3 text-center">
+      <img src="./images/road.png" width="30%" /><br/><br/>
+      <p style="color:grey;font-size: 13px"><b>Internal R.C.C roads with underground wiring</b></p>
+   </div>
+   <div class="col-sm-3 col-3 col-md-3 text-center">
+      <img src="./images/parking.png" width="30%" /><br/><br/>
+      <p style="color:grey;font-size: 13px"><b>Ground & basement parking</b></p>
+   </div>
+   <div class="col-sm-3 col-3 col-md-3 text-center">
+      <img src="./images/water-tap.png" width="30%" /><br/><br/>
+      <p style="color:grey;font-size: 13px"><b>24 Hours water supply,common bore well with submersible pump</b></p>
+   </div>
+   <div class="col-sm-3 col-3 col-md-3 text-center">
+      <img src="./images/landscape.png" width="30%" /><br/><br/>
+      <p style="color:grey;font-size: 13px"><b>Developed common plot with landscape garden</b></p>
+   </div>
+ </div>
+</div>
+
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12 col-md-12 text-center">
+			<p class="Aboutheading"><b>ABOUT US</b></p>
+		</div>
+	</div>
+	<div class="row"> 
+    <div class="col-sm-12 col-md-5 text-center Aboutimagemargin">
+      <img src="./images/Propertyimg.jpeg" width="100%"/>
+    </div>
+    <div class="col-sm-12 col-md-1"></div>
+		<div class="col-sm-12 col-md-6 text-left" style="margin-top:50px">
+			<p style="font-size:18px;color:grey">Welcome to SUNDARAM NEST. Conveniently located in Ahmedabad. SUNDARAM NEST is an exclusive gated and secured planned developement in Ahmedabad.where all the recidents' needs are within easy walking distance. Created from baranded, this luxuriantly green and grand Scheme is an tangible expression of vision to create better communities. Blending the esseincials of peace, calm and comfort with luxury of opulence,space and style , this unique creation is truly in tune with the nature.</p>
+		</div>
+	</div>
+</div>
+
+
+<div class="container" style="margin-top: 40px">
+  <div class="row">
+    <div class="col-sm-12 col-md-6">
+      <img src="./images/brochureimage.png" width="100%" height="auto"/>
+    </div>
+    <div class="col-sm-12 col-md-6">
+      <p style="font-size: 20px"><b>NEW SCALE OF LEISURE IN LIFE</b></p>
+      <p style="font-size: 17px">Masterpieces demand to be admired in detail. so that their true value can be understood and appreciated in all their glory. SUNDARAM NEST is one such masterpiece of art where finesse of lifestyle, minute detailing and strokes of luxury have all come to create a large canvas for living.</p>
+    </div>
+  </div>
+</div>
+
+
+ <div class="container">
+  
+<h1 class="heading"><b>SITE IMAGES</b> </h1>
+
+
+<div class="gallery">
+
+  <div class="gallery-item" style="border-radius: 13px;height:238px;border: 1px solid #797575;">
+    <img class="gallery-image" src="./images/siteImg1.jpeg?fit=crop" width="100%" height="100%" alt="person writing in a notebook beside by an iPad, laptop, printed photos, spectacles, and a cup of coffee on a saucer">
+  </div>
+
+  <div class="gallery-item" style="border-radius: 13px;height:238px;border: 1px solid #797575;">
+    <img class="gallery-image" src="./images/siteImg2.jpeg?fit=crop"  width="100%" height="100%" alt="sunset behind San Francisco city skyline">
+  </div>
+
+  <div class="gallery-item" style="border-radius: 13px;height:238px;border: 1px solid #797575;">
+    <img class="gallery-image" src="./images/siteImg3.jpeg?fit=crop" width="100%" height="100%" alt="people holding umbrellas on a busy street at night lit by street lights and illuminated signs in Tokyo, Japan">
+  </div>
+
+  <div class="gallery-item" style="border-radius: 13px;height:238px;border: 1px solid #797575;">
+    <img class="gallery-image" src="./images/siteImg4.jpeg?fit=crop" width="100%" height="100%" alt="car interior from central back seat position showing driver and blurred view through windscreen of a busy road at night">
+  </div>
+
+  <div class="gallery-item" style="border-radius: 13px;height:238px;border: 1px solid #797575;">
+    <img class="gallery-image" src="./images/siteImg5.jpeg?fit=crop" width="100%" height="100%" alt="back view of woman wearing a backpack and beanie waiting to cross the road on a busy street at night in New York City, USA">
+  </div>
+
+  <div class="gallery-item" style="border-radius: 13px;height:238px;border: 1px solid #797575;">
+    <img class="gallery-image" src="./images/siteImg6.jpeg?fit=crop" width="100%" height="100%" alt="man wearing a black jacket, white shirt, blue jeans, and brown boots, playing a white electric guitar while sitting on an amp">
+  </div>
+
+</div>
+</div>
+</div> 
+
+<div class="container">
+<div class="row" >
+  <div class="col-sm-12 col-md-12 text-center">
+   <p class="heading"><b>RERA</b></p>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-6 reraregiser" >
+      <p style="font-size: 18px"><b>Registration Number :</b></p><br/>
+      <p style="font-size: 18px">PR/GJ/AHMEDABAD/AHMEDABAD CITY/AUDA/MAA06372/221119</p>
+    </div>
+    <div class="col-sm-12 col-md-6 reralink">
+      <p style="font-size: 18px"><b>Want to know more about RERA ?<b></p><br/>
+      <p class="padclass"><a href="https://gujrera.gujarat.gov.in/home" target="_blank"><img src="./images/clickhereformore.png" width="40%" height="auto"></a></p>
+    </div>
+
+  </div>
+</div>
+</div>
+
+
+<div style="margin-top:50px">
+    <div class="slider">
+<div class="slide-track">
+  <div class="slide">
+    <img src="./images/brochureImg1.png" height="100" width="250" alt="" />
+  </div>
+  <div class="slide">
+    <img src="./images/brochureImg2.png" height="100" width="250" alt="" />
+  </div>
+  <div class="slide">
+    <img src="./images/brochureImg3.png" height="100" width="250" alt="" />
+  </div>
+  <div class="slide">
+    <img src="./images/brochureImg4.png" height="100" width="250" alt="" />
+  </div>
+  <div class="slide">
+    <img src="./images/brochureImg5.png" height="100" width="250" alt="" />
+  </div>
+  <div class="slide">
+    <img src="./images/brochureImg6.png" height="100" width="250" alt="" />
+  </div>
+  <div class="slide">
+    <img src="./images/brochureImg7.png" height="100" width="250" alt="" />
+  </div>
+  <div class="slide">
+    <img src="./images/brochureImg8.png" height="100" width="250" alt="" />
+  </div>
+  <div class="slide">
+    <img src="./images/brochureImg9.png" height="100" width="250" alt="" />
+  </div>
+  <div class="slide">
+    <img src="./images/brochureImg10.png" height="100" width="250" alt="" />
+  </div>
+  <div class="slide">
+    <img src="./images/brochureImg1.png" height="100" width="250" alt="" />
+  </div>
+  <div class="slide">
+    <img src="./images/brochureImg2.png" height="100" width="250" alt="" />
+  </div>
+  <div class="slide">
+    <img src="./images/brochureImg3.png" height="100" width="250" alt="" />
+  </div>
+</div>
+</div>
+  
+</div>
+
+<div class="container" style="margin-top:50px">
+<div class="row">
+  <div class="col-sm-12 col-md-12 text-center" >
+    <p style="font-size:30px">Want to Download the Brochure? Click Below.</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12 col-md-12 text-center">
+    <a href="./pdfs/Sundaram-nestPDF.pdf" download="proposed_file_name">
+      <img src="./images/download-brochure.png"/>
+    </a>
+  </div>
+</div>
+</div>
+
+
+
+
+
+<div class="container-fluid" style="background: #9d7373d9;margin-top:50px">
+<div class="row">
+  <div class="col-sm-12 col-md-6 text-center" style="margin-top:15px;margin-bottom:10px;">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117491.58471233868!2d72.49388261368449!3d23.03801343283517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9dc2866f8de7%3A0x21fddba3005c9390!2sSundaram%20Nest!5e0!3m2!1sen!2sin!4v1608891878287!5m2!1sen!2sin" width="80%" height="250" frameborder="0" style="border:0;border-radius:5px" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+  </div>
+
+  <div class="col-sm-12 col-md-6 " style="margin-top:8%;">
+    <ul style="list-style-type: none">
+      <li>
+          <p style="color:white;font-size:15px"><i class="far fa-envelope fa-lg"></i><span style="padding:10px"></span></p><br/>
+      </li>
+      <li>
+          <p style="color:white;font-size:15px"><i class="fas fa-phone-alt fa-lg"></i><span style="padding:10px">+91 9825203020</span></p><br/>
+      </li>
+      <li>
+          <p style="color:white;font-size:15px"><i class="fas fa-map-marker-alt fa-lg"></i><span style="padding:10px">Sundaram Nest, besides Aashray Arise, nr, Shilaj Rd, Shilaj, Gujarat 380059</span></p><br/>
+      </li>
+    </ul>
+    
+  </div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+</body>
+</html>
+
